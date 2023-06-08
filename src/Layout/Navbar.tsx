@@ -10,10 +10,14 @@ function Navbar(props: Props) {
   const {} = props;
 
   return (
-    <Flex justifyContent={"space-around"} alignItems={"center"}>
+    <Flex
+      justifyContent={"space-around"}
+      alignItems={"center"}
+      padding={"2rem 0"}
+    >
       <Logo />
 
-      <Flex columnGap={"1rem"}>
+      <Flex display={{ base: "none", md: "flex" }} columnGap={"1rem"}>
         <Link as={NextLink} href="/">
           Home
         </Link>
@@ -25,11 +29,17 @@ function Navbar(props: Props) {
         </Link>
       </Flex>
 
-      <Flex columnGap={"1rem"} alignItems={"center"}>
+      <Flex
+        display={{ base: "none", md: "flex" }}
+        columnGap={"1rem"}
+        alignItems={"center"}
+      >
         <Link as={NextLink} href="/login">
           Login
         </Link>
-        <Button>Open an account</Button>
+        <Button backgroundColor={"#4DA195"} colorScheme="brand">
+          Open an account
+        </Button>
       </Flex>
     </Flex>
   );

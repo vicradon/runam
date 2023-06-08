@@ -6,7 +6,7 @@ interface Props {}
 function Logo(props: Props) {
   const {} = props;
 
-  return <Image src="/icons/logo.png" alt="logo" width="200" height="100" />;
+  return <Image src="/icons/logo.png" alt="logo" width="168" height="50" />;
 }
 
 export default Logo;
