@@ -15,6 +15,7 @@ import {
   Heading,
   Text,
   Image as ChakraImage,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,6 +24,8 @@ import React from "react";
 interface Props {}
 
 function Index(props: Props) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const {} = props;
 
   const whyRunam = [
@@ -147,7 +150,17 @@ function Index(props: Props) {
               rowGap={"1rem"}
               justifyContent={{ base: "space-between", sm: "left" }}
             >
-              <PlaceOrderModal />
+              <PlaceOrderModal onClose={onClose} isOpen={isOpen} />
+
+              <Button
+                size={{ base: "sm", md: "lg" }}
+                backgroundColor="#4DA195"
+                colorScheme="brand"
+                onClick={onOpen}
+              >
+                Place an Order
+              </Button>
+
               <Button
                 display={"flex"}
                 alignItems={"center"}
@@ -324,7 +337,12 @@ function Index(props: Props) {
                 </Flex>
               ))}
 
-              <Button size={"lg"} backgroundColor={"#4DA195"} color={"white"}>
+              <Button
+                onClick={onOpen}
+                size={"lg"}
+                backgroundColor={"#4DA195"}
+                color={"white"}
+              >
                 Place an Order
               </Button>
             </Flex>
@@ -412,7 +430,12 @@ function Index(props: Props) {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <Button bgColor={"white"} color={"#4DA195"} colorScheme="brand">
+            <Button
+              onClick={onOpen}
+              bgColor={"white"}
+              color={"#4DA195"}
+              colorScheme="brand"
+            >
               Place an Order
             </Button>
             <Button bgColor={"white"} color={"#4DA195"} colorScheme="brand">

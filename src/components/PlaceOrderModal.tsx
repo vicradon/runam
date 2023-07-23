@@ -8,39 +8,32 @@ import {
   useDisclosure,
   Button,
   useMediaQuery,
+  Flex,
 } from "@chakra-ui/react";
+import React from "react";
 
-const PlaceOrderModal = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+const PlaceOrderModal = ({ isOpen, onClose }) => {
   const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
 
   return (
-    <>
-      <Button
-        size={{ base: "sm", md: "lg" }}
-        backgroundColor="#4DA195"
-        colorScheme="brand"
-        onClick={onOpen}
-      >
-        Place an Order
-      </Button>
-      <Modal isOpen={isOpen} onClose={onClose} size={"2xl"}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Place Order</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
+    <Modal isOpen={isOpen} onClose={onClose} size={"2xl"}>
+      <ModalOverlay />
+      <ModalContent>
+        <ModalHeader>Place Order</ModalHeader>
+        <ModalCloseButton />
+        <ModalBody>
+          <Flex justifyContent="center" alignItems="center">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSceqCf1AN4aDm3YxFYt13QX8biIRHglBIoiiY2uBzKnvFZyBA/viewform?embedded=true"
-              width="auto"
+              width="100%"
               height="915"
             >
               Loading…
             </iframe>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
-    </>
+          </Flex>
+        </ModalBody>
+      </ModalContent>
+    </Modal>
   );
 };
 
