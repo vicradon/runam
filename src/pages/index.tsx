@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import PlaceOrderModal from "@/components/PlaceOrderModal";
 import HomeLayout from "@/Layout/HomeLayout";
 import {
   Accordion,
@@ -29,19 +30,19 @@ function Index(props: Props) {
       icon: "/icons/whyrunam/truck.svg",
       icon_size: [27, 36],
       title: "Fast Delivery",
-      description: "Run Am is renowned for its exceptional speed in delivery.",
+      description: "RunAm is renowned for its exceptional speed in delivery.",
     },
     {
       icon: "/icons/whyrunam/padlock.svg",
       icon_size: [28, 34],
       title: "Security",
-      description: "Run Am ensures there is confidentiality of packages.",
+      description: "RunAm ensures there is confidentiality of packages.",
     },
     {
       icon: "/icons/whyrunam/shield.svg",
       icon_size: [38, 34],
       title: "Reliability",
-      description: "You can rely on Run Am to handle your deliveries.",
+      description: "You can rely on RunAm to handle your deliveries.",
     },
   ];
 
@@ -76,25 +77,24 @@ function Index(props: Props) {
 
   const faqs = [
     {
-      question: "What is Run Am about?",
+      question: "What is RunAm about?",
       answer:
-        "Run Am is a leading dispatch delivery service that specializes in providing efficient and reliable delivery solutions. We connect individuals and businesses with a network of professional drivers to ensure seamless transportation of packages, documents, and goods.",
+        "RunAm is a leading dispatch delivery service that specializes in providing efficient and reliable delivery solutions. We connect individuals and businesses with a network of professional drivers to ensure seamless transportation of packages, documents, and goods.",
     },
     {
       question: "How can I track my dispatch ride?",
       answer: "",
     },
     {
-      question: "What types of packages can I send with Run Am?",
+      question: "What types of packages can I send with RunAm?",
       answer: "",
     },
     {
-      question:
-        "How does Run Am ensure the safety and security of my packages?",
+      question: "How does RunAm ensure the safety and security of my packages?",
       answer: "",
     },
     {
-      question: "What are the available payment options for Run Am services?",
+      question: "What are the available payment options for RunAm services?",
       answer: "",
     },
   ];
@@ -132,7 +132,7 @@ function Index(props: Props) {
                 Efficient Dispatch Delivery Solutions for Every Mile:
               </Text>
               <Text fontSize={"4xl"} fontWeight={"bold"} color={"#4DA195"}>
-                Run Am
+                RunAm
               </Text>
             </Box>
 
@@ -147,13 +147,7 @@ function Index(props: Props) {
               rowGap={"1rem"}
               justifyContent={{ base: "space-between", sm: "left" }}
             >
-              <Button
-                size={{ base: "sm", md: "lg" }}
-                backgroundColor="#4DA195"
-                colorScheme="brand"
-              >
-                Place an Order
-              </Button>
+              <PlaceOrderModal />
               <Button
                 display={"flex"}
                 alignItems={"center"}
@@ -167,7 +161,7 @@ function Index(props: Props) {
                   width={{ base: "14px", md: "36px" }}
                   height={"35px"}
                 />
-                <Text>How Run Am works</Text>
+                <Text>How RunAm works</Text>
               </Button>
             </Flex>
           </Flex>
@@ -184,9 +178,9 @@ function Index(props: Props) {
 
         <Box>
           <Box textAlign={"center"} mb={"2rem"}>
-            <Heading>Why use Run AM?</Heading>
+            <Heading>Why use RunAM?</Heading>
             <Text>
-              Choose Run Am for Unparalleled Dispatch Delivery Excellence
+              Choose RunAm for Unparalleled Dispatch Delivery Excellence
             </Text>
           </Box>
 
@@ -243,7 +237,7 @@ function Index(props: Props) {
               </Box>
 
               <Text mb={"1rem"}>
-                At Run Am, our overarching goal is to establish a dispatch
+                At RunAm, our overarching goal is to establish a dispatch
                 delivery experience that seamlessly serves Africans, driven by
                 innovation, technology, and eco-friendly infrastructure.
               </Text>
@@ -268,7 +262,6 @@ function Index(props: Props) {
           </Grid>
         </Box>
       </Container>
-
       <Box marginY={"8rem"} paddingY={"5rem"} bgColor={"#DEF3F0"}>
         <Container maxW={"container.xl"}>
           <Heading color="#1F403C" mb={"1.5rem"} textAlign={"center"}>
@@ -338,7 +331,6 @@ function Index(props: Props) {
           </Grid>
         </Container>
       </Box>
-
       <Box mb={"8rem"}>
         <Container maxW={"container.xl"}>
           <Box mb={"4rem"}>
@@ -412,7 +404,7 @@ function Index(props: Props) {
             mb={"2rem"}
             fontWeight={"bold"}
           >
-            Are you ready for a world of Dispatch <br /> Adventure with Run Am?
+            Are you ready for a world of Dispatch <br /> Adventure with RunAm?
           </Text>
 
           <Flex
