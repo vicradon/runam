@@ -12,7 +12,13 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-const PlaceOrderModal = ({ isOpen, onClose }) => {
+const PlaceOrderModal = ({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean;
+  onClose: VoidFunction;
+}) => {
   const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
 
   return (
