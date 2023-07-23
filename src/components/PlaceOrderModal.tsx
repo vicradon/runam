@@ -34,8 +34,6 @@ const PlaceOrderModal = () => {
               src="https://docs.google.com/forms/d/e/1FAIpQLSceqCf1AN4aDm3YxFYt13QX8biIRHglBIoiiY2uBzKnvFZyBA/viewform?embedded=true"
               width="auto"
               height="915"
-              marginheight="0"
-              marginwidth="0"
             >
               Loading…
             </iframe>
